@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            margin:50px;
+            height: 500px;
+            width: 800px;
+            border: 1px silver solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<a href="/">Index</a>
+<a href="/quotes">Quotes</a>
+<br>
+    <h1>Dojo Quotes Submit</h1>
+
+    <div class="container">
+
+        <form action="/quotes" method="post">
+
+            <% if(messages.name) { %><%=messages.name%> <br> <%}%>
+            <input type="text" name="name" placeholder="Your Name"> <br>
+            <% if(messages.quote) { %><%=messages.quote%> <br><%}else{%><br><%}%>
+            <textarea type="text" cols="20" rows ="10" name="quote" placeholder="write a quote"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
+</body>
+</html>

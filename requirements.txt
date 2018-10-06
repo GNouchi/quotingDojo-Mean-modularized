@@ -1,0 +1,3 @@
+# need to have mongod running
+# need to have nodejs installed
+# package.json set up so you should just be able to run npm install

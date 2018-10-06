@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            margin:50px;
+            height: 300px;
+            width: 800px;
+            border: 1px silver solid;
+            overflow: auto;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<a href="/">Index</a>
+<a href="/quotes">Quotes</a>
+<br>
+    <h1>Dojo Quotes Show All Quotes</h1>    
+    <div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Quote</th>
+            <th>Created On</th>
+        </tr>
+        <tbody>
+    <% for(let quote of allQuotes){%>
+        <tr>
+            <td> <%=  quote.name     %> </td>
+            <td> <%=  quote.quote    %> </td>
+            <td> <%=  quote.createdAt%> </td>
+        </tr>
+    <%}%>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>
